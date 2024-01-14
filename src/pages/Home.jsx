@@ -1,8 +1,11 @@
+import Welcome from "../components/Welcome";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <div>
+      <Welcome />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

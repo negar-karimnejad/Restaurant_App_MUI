@@ -13,12 +13,12 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navLinks } from "../data/data";
+import { NavLinksBox, NavbarLink, NavbarLogo } from "../theme";
 import CustomButton from "./CustomButton";
 
 const Header = () => {
@@ -27,14 +27,14 @@ const Header = () => {
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
-      (event.type === "Tab" || event.type === "Shift")
+      (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
     setMobileMenu({ ...mobileMenu, [anchor]: open });
   };
 
-  const list = (anchor) => {
+  const list = (anchor) => (
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
@@ -56,33 +56,9 @@ const Header = () => {
           </ListItem>
         ))}
       </List>
-    </Box>;
-  };
+    </Box>
+  );
 
-  const NavLinksBox = styled(Box)(({ theme }) => ({
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: theme.spacing(3),
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  }));
-  const NavbarLink = styled(Typography)(() => ({
-    fontWeight: "bold",
-    color: "#4f5361",
-    fontSize: "15px",
-    cursor: "pointer",
-    "&:hover": {
-      color: "#fff",
-    },
-  }));
-  const NavbarLogo = styled("img")(({ theme }) => ({
-    cursor: "pointer",
-    [theme.breakpoints.down("md")]: {
-      display: "none",
-    },
-  }));
   const CustomMenu = styled(Menu)(({ theme }) => ({
     cursor: "pointer",
     display: "none",
