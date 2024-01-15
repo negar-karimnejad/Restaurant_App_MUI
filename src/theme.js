@@ -66,3 +66,26 @@ export const FooterIconBox = styled(Box)(({ theme }) => ({
     justifyContent: "center",
   },
 }));
+
+export const CustomPartnerBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gap: theme.spacing(4),
+  marginBottom: "2rem",
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
+}));
+
+export const CustomPartnerInnerBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "start",
+  textAlign: "left",
+  gap: theme.spacing(2),
+  [theme.breakpoints.down("sm")]: {
+    alignItems: "center",
+    textAlign: "center",
+  },
+}));
