@@ -27,16 +27,8 @@ function Welcome() {
           More About Us
         </CustomButton>
       </Box>
-      <Box
-        sx={{
-          flex: "1.25",
-        }}
-      >
-        <img
-          style={{ maxWidth: "100%" }}
-          src={welcomeImg}
-          alt="Welcome Image"
-        />
+      <Box>
+        <img src={welcomeImg} alt="Welcome Image" />
       </Box>
     </Box>
   );
