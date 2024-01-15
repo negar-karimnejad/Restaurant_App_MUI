@@ -1,7 +1,21 @@
-import { Box, Container, Grid, Menu, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 // Navbar
+export const NavbarContainer = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: theme.spacing("40px"),
+  maxWidth: "auto",
+  backgroundColor: "#FED801",
+  marginLeft: theme.spacing(0),
+  marginBottom: theme.spacing("-24px"),
+  zIndex: 100,
+  position: "sticky",
+  top: 0,
+}));
+
 export const NavLinksBox = styled(Box)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
@@ -26,15 +40,6 @@ export const NavbarLogo = styled("img")(({ theme }) => ({
   cursor: "pointer",
   [theme.breakpoints.down("md")]: {
     display: "none",
-  },
-}));
-
-export const CustomMenu = styled(Menu)(({ theme }) => ({
-  cursor: "pointer",
-  display: "none",
-  marginRight: theme.spacing(2),
-  [theme.breakpoints.down("md")]: {
-    display: "block",
   },
 }));
 

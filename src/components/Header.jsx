@@ -14,11 +14,11 @@ import {
   ListItemButton,
   ListItemIcon,
 } from "@mui/material";
-import { styled } from "@mui/system";
+import { styled } from "@mui/material/styles";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import { navLinks } from "../data/data";
-import { NavLinksBox, NavbarLink, NavbarLogo } from "../theme";
+import { NavLinksBox, NavbarContainer, NavbarLink, NavbarLogo } from "../theme";
 import CustomButton from "./CustomButton";
 
 const Header = () => {
@@ -61,7 +61,7 @@ const Header = () => {
     </Box>
   );
 
-  const CustomMenu = styled(Menu)(({ theme }) => ({
+  const NavbarCustomMenu = styled(Menu)(({ theme }) => ({
     cursor: "pointer",
     display: "none",
     marginRight: theme.spacing(2),
@@ -69,20 +69,8 @@ const Header = () => {
       display: "block",
     },
   }));
-
   return (
-    <Box
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "40px",
-        maxWidth: "auto",
-        backgroundColor: "#FED801",
-        marginLeft: "0px",
-        marginBottom: "-24px",
-      }}
-    >
+    <NavbarContainer>
       <Box
         sx={{
           display: "flex",
@@ -97,7 +85,7 @@ const Header = () => {
             alignItems: "center",
           }}
         >
-          <CustomMenu onClick={toggleDrawer("left", true)} />
+          <NavbarCustomMenu onClick={toggleDrawer("left", true)} />
           <Drawer
             anchor="left"
             open={mobileMenu["left"]}
@@ -110,7 +98,9 @@ const Header = () => {
         <NavLinksBox>
           {navLinks.map((link) => (
             <NavbarLink variant="body2" key={link.id}>
-              {link.title}
+              <Link href={link.link} underline="none" color={"#555"}>
+                {link.title}
+              </Link>
             </NavbarLink>
           ))}
         </NavLinksBox>
@@ -128,7 +118,7 @@ const Header = () => {
           Register
         </CustomButton>
       </Box>
-    </Box>
+    </NavbarContainer>
   );
 };
 
