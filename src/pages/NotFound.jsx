@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { BookingBox } from "../theme";
 
-const AboutPage = () => {
+function NotFound() {
   return (
     <BookingBox sx={{ my: "5rem" }}>
       <div
@@ -13,7 +13,7 @@ const AboutPage = () => {
         }}
       ></div>
       <Typography variant="h5" fontWeight={"bold"} color="#000339">
-        About Us
+        404 : Page Not Found
       </Typography>
       <Typography
         variant="p"
@@ -23,11 +23,10 @@ const AboutPage = () => {
         color="#5A6473"
         maxWidth={"500px"}
       >
-        Welcome to our restaurant, where culinary exellence meets warm
-        hospitality.
+        We could not find what you were looking for.
       </Typography>
     </BookingBox>
   );
-};
+}
 
-export default AboutPage;
+export default NotFound;
