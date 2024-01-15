@@ -6,7 +6,7 @@ import { CustomPartnerBox, CustomPartnerInnerBox } from "../theme";
 
 function Partner() {
   return (
-    <Box sx={{ py: 10 }}>
+    <Box sx={{ py: 4 }}>
       <Container>
         <CustomPartnerBox>
           <CustomPartnerInnerBox>
