@@ -29,7 +29,7 @@ function Booking() {
       </Typography>
       <BookingGrid container>
         {bookList.map((list) => (
-          <Grid key={list.item} item md={3} xs={12}>
+          <Grid key={list.id} item md={3} xs={12}>
             <img src={list.img} alt="Buy" />
             <Typography
               variant="body1"

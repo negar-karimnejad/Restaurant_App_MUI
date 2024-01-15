@@ -128,8 +128,8 @@ export const DishesTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const DishesInfoContainer = styled(Box)(() => ({
-  width: "400px",
-  backgroundColor:"#FFF",
+  width: "330px",
+  backgroundColor: "#FFF",
   boxShadow: "0px 0px 5px rgba(0,0,0,0.2)",
   "&:hover": {
     transform: "scale(1.05)",
@@ -152,6 +152,71 @@ export const DishesInfoActionBox = styled(Box)(({ theme }) => ({
   fontWeight: "500",
 }));
 
+// Ambience
+export const AmbienceBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.spacing(5),
+  padding: theme.spacing(0, 0, 8, 0),
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+  },
+}));
+
+export const AmbienceDesc = styled(Box)(({ theme }) => ({
+  flex: "1",
+  display: "flex",
+  flexDirection: "column",
+  [theme.breakpoints.down("md")]: {
+    textAlign: "center",
+    alignItems: "center",
+  },
+}));
+
+export const StatisticsBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: theme.spacing(5),
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    gap: theme.spacing(10),
+  },
+}));
+
+export const CustomSpan = styled("span")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  fontWeight: "bold",
+  fontSize: "30px",
+  padding: theme.spacing(0, 4, 0, 4),
+}));
+
+// Delivery
+export const DeliveryContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: "#FED801",
+  display: "flex",
+  alignItems: "center",
+  borderRadius: "1rem",
+  padding: theme.spacing(2, 10, 2, 10),
+  justifyContent: "space-between",
+  [theme.breakpoints.down("md")]: {
+    flexDirection: "column",
+    padding: theme.spacing(2),
+  },
+}));
+export const DeliveryDesc = styled(Box)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  flexDirection: "column",
+  gap: theme.spacing(3),
+  [theme.breakpoints.down("md")]: {
+    alignItems: "center",
+    textAlign: "center",
+    margin: theme.spacing(0, 0, 2, 0),
+  },
+}));
 // Footer
 export const CustomFooterContainer = styled(Container)(({ theme }) => ({
   display: "flex",

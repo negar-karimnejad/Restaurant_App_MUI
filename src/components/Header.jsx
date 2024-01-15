@@ -8,11 +8,11 @@ import {
 import {
   Box,
   Drawer,
+  Link,
   List,
   ListItem,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
 } from "@mui/material";
 import { styled } from "@mui/system";
 import { useState } from "react";
@@ -51,7 +51,9 @@ const Header = () => {
                 {item.id === 3 && <MiscellaneousServices />}
                 {item.id === 4 && <Contacts />}
               </ListItemIcon>
-              <ListItemText primary={item.title} />
+              <Link href={item.link} underline="none" color={"gray"}>
+                {item.title}
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}

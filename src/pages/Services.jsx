@@ -1,8 +1,7 @@
+import Booking from "../components/Booking";
 
-const Services = () => {
-  return (
-    <div>Services</div>
-  )
-}
+const ServicesPage = () => {
+  return <Booking />;
+};
 
-export default Services
+export default ServicesPage;

@@ -1,8 +1,7 @@
+import Dishes from "../components/Dishes";
 
-const Dishes = () => {
-  return (
-    <div>Dishes</div>
-  )
-}
+const DishesPage = () => {
+  return <Dishes />;
+};
 
-export default Dishes
+export default DishesPage;
